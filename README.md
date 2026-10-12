@@ -6,17 +6,17 @@
   <a href="https://github.com/jyliu-98/TrajCFG"><img src="https://img.shields.io/github/stars/jyliu-98/TrajCFG?style=social" alt="GitHub stars"></a>
 </p>
 
-<p align="center">
+<h3 align="center">
   Jingyu Liu<sup>1,†,§</sup>&emsp;
   Hao Jiang<sup>2,†</sup>&emsp;
   Yikang Ding<sup>2,‡</sup>&emsp;
   Huafeng Shi<sup>2</sup>&emsp;
-  Xu Yang<sup>2</sup><br>
+  Xu Yang<sup>2</sup>&emsp;
   Xiaoqiang Liu<sup>2</sup>&emsp;
-  Guoxin Zhang<sup>2</sup>&emsp;
+  Guoxin Zhang<sup>2</sup><br>
   Pengfei Wan<sup>2</sup>&emsp;
   Kun Gai<sup>2,*</sup>
-</p>
+</h3>
 
 <p align="center">
   <sup>1</sup>Renmin University of China&emsp;&emsp;
