@@ -1,17 +1,13 @@
 # TrajCFG: Token-Wise Classifier-Free Guidance via Denoising Trajectory Feedback
 
 <p align="center">
-  Official PyTorch implementation of <strong>TrajCFG</strong>.
-</p>
-
-<p align="center">
   <a href="https://jyliu-98.github.io/trajcfg-project-page/"><img src="https://img.shields.io/badge/Project-Page-69b3a2" alt="Project Page"></a>
   <img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv coming soon">
   <a href="https://github.com/jyliu-98/TrajCFG"><img src="https://img.shields.io/github/stars/jyliu-98/TrajCFG?style=social" alt="GitHub stars"></a>
 </p>
 
 <p align="center">
-  <a href="https://scholar.google.com/citations?user=u7Dqok8AAAAJ">Jingyu Liu</a><sup>1,†,§</sup>&emsp;
+  Jingyu Liu<sup>1,†,§</sup>&emsp;
   Hao Jiang<sup>2,†</sup>&emsp;
   Yikang Ding<sup>2,‡</sup>&emsp;
   Huafeng Shi<sup>2</sup>&emsp;
