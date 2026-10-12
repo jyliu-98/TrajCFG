@@ -1,0 +1,8 @@
+accelerate>=1.1.0
+diffusers>=0.40.0
+imageio[ffmpeg]>=2.35.0
+numpy>=1.26.0
+sentencepiece>=0.2.0
+torch>=2.4.0
+transformers>=4.49.0
+
