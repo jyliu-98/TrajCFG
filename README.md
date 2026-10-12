@@ -104,6 +104,12 @@ Please follow the official installation instructions for
 [Diffusers](https://github.com/huggingface/diffusers) and obtain the
 corresponding SD3-Medium or Qwen-Image checkpoint before running the examples.
 
+### Image-to-3D backbone
+
+Please follow the official installation instructions for
+[Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2), then run the
+shape and texture examples in its environment.
+
 ## Usage
 
 Every backbone is implemented as a self-contained script containing the full
@@ -220,10 +226,33 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2i/qwen_image.py \
   --prompt "YOUR_PROMPT"
 ```
 
+### Image-to-3D
+
+#### Hunyuan3D-2 shape generation
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/shape.py \
+  --gpu 0 \
+  --model-path "tencent/Hunyuan3D-2" \
+  --image "/path/to/input.png" \
+  --num-inference-steps 50
+```
+
+#### Hunyuan3D-2 texture generation
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/texture.py \
+  --gpu 0 \
+  --model-path "tencent/Hunyuan3D-2" \
+  --image "/path/to/input.png" \
+  --mesh "outputs/i2_3d_shape.glb" \
+  --num-inference-steps 50
+```
+
 Replace `YOUR_PROMPT`, the input image path, model path, and CUDA device as
 needed. Seeds, output paths, and TrajCFG hyperparameters can also be overridden
 through command-line arguments. Outputs are written to `outputs/`; every
-generated MP4 or PNG is accompanied by a JSON file containing the generation
+generated result is accompanied by a JSON file containing the generation
 settings and per-step scale statistics.
 
 One non-VBench qualitative example is provided for each task/backbone. See
@@ -243,6 +272,8 @@ One non-VBench qualitative example is provided for each task/backbone. See
 | T2AV | LTX-2.3 | 5.0 | 4.0 | 9.0 | 0.90 | 30 |
 | T2I | Qwen-Image | 5.0 | 4.0 | 9.0 | 0.95 | 30 |
 | T2I | SD3-Medium | 7.0 | 6.0 | 9.0 | 0.95 | 28 |
+| I2-3D | Hunyuan3D-2 Shape | 7.0 | 5.0 | 9.0 | 0.95 | 50 |
+| I2-3D | Hunyuan3D-2 Texture | 2.0 | 2.0 | 3.0 | 0.95 | 50 |
 
 These defaults match Table 7 of the paper. All examples use adjacent/stride-2
 fusion weights `(0.8, 0.2)`.
@@ -255,7 +286,8 @@ TrajCFG/
 │   ├── t2v/                 # Self-contained text-to-video examples
 │   ├── i2v/                 # Self-contained image-to-video examples
 │   ├── t2av/                # Self-contained text-to-audio-video examples
-│   └── t2i/                 # Self-contained text-to-image examples
+│   ├── t2i/                 # Self-contained text-to-image examples
+│   └── i2_3d/               # Self-contained image-to-3D examples
 ├── assets/README.md         # Qualitative example inputs and results
 └── README.md
 ```
@@ -289,3 +321,4 @@ This repository builds upon the following open-source projects:
 - [LTX-2.3](https://github.com/Lightricks/LTX-2).
 - [Stable Diffusion 3](https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers).
 - [Qwen-Image](https://huggingface.co/Qwen/Qwen-Image-2512).
+- [Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2).

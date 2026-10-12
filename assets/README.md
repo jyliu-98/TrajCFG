@@ -14,5 +14,6 @@ Each example is selected from the paper's non-VBench qualitative results. The me
 | LTX-2.3 | Three knocks at an apartment door (T2AV-Compass) | Text | [Video + audio](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/t2av/t2av_compass_ltx23/trajcfg.mp4) |
 | Stable Diffusion 3 Medium | A dog right of a teddy bear (GenEval) | Text | [Base / TrajCFG comparison](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/t2i/sd3-medium/comparison.png) |
 | Qwen-Image | Three baseball bats (GenEval) | Text | [Base / TrajCFG comparison](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/t2i/qwen-image/comparison.png) |
+| Hunyuan3D-2 | GSO sample 386 | [Image](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/i2-3d/386.jpeg) | [3D result](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/i2-3d/386_trajcfg.gif) |
 
-The I2V scripts use the raw GitHub URLs for these conditioning images by default. Pass `--image /path/to/input.jpg` to run entirely from local files.
+The image-conditioned scripts use raw GitHub URLs for their example inputs by default. Pass `--image /path/to/input.jpg` to run entirely from local files.
