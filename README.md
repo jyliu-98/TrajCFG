@@ -56,10 +56,15 @@ TrajCFG is:
 At denoising step `k`, TrajCFG compares historical guided velocities and maps
 their token-wise cosine similarity to bounded guidance scales:
 
-```text
-q[k,p] = cosine(v_hat[k-2,p], v_hat[k-1,p])
-s[k,p] = s_min + (s_max - s_min) * clip((1 - q[k,p]) / (1 - rho_lo), 0, 1)
-```
+$$
+q_{k,p}=\cos\!\left(\widehat{\mathbf{v}}_{k-2,p},
+\widehat{\mathbf{v}}_{k-1,p}\right),
+$$
+
+$$
+s_{k,p}=s_{\min}+(s_{\max}-s_{\min})
+\operatorname{clip}\!\left(\frac{1-q_{k,p}}{1-\rho_{\mathrm{lo}}},0,1\right).
+$$
 
 From step 3 onward, adjacent-step feedback is fused with interval-normalized
 stride-2 feedback using weights `0.8/0.2`.
