@@ -70,23 +70,23 @@ stride-2 feedback using weights `0.8/0.2`.
 
 ## Installation
 
-### Wan backbones
-
 ```bash
 git clone https://github.com/jyliu-98/TrajCFG.git
 cd TrajCFG
-pip install -r requirements.txt
 ```
 
-The Wan examples use Diffusers 0.40 or later and download model weights from
-Hugging Face by default. Pass `--model-id` to use a local Diffusers checkpoint.
+### Wan backbones
+
+Please follow the official installation instructions for
+[Diffusers](https://github.com/huggingface/diffusers) and the corresponding
+[Wan2.1](https://github.com/Wan-Video/Wan2.1) or
+[Wan2.2](https://github.com/Wan-Video/Wan2.2) backbone.
 
 ### Cosmos-Predict2.5
 
-Run the Cosmos example in the official
-[Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5)
-environment. Cosmos-specific dependencies are intentionally not included in
-the Wan-focused `requirements.txt`.
+Please follow the official installation instructions for
+[Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5) and run
+the Cosmos example in its environment.
 
 ## Usage
 
@@ -138,7 +138,6 @@ TrajCFG/
 │   ├── t2v/                 # Self-contained text-to-video examples
 │   └── i2v/                 # Self-contained image-to-video examples
 ├── assets/README.md         # Qualitative example inputs and results
-├── requirements.txt         # Wan/Diffusers dependencies
 └── README.md
 ```
 
