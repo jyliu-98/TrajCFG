@@ -63,7 +63,7 @@ $$
 
 $$
 s_{k,p}=s_{\min}+(s_{\max}-s_{\min})
-\operatorname{clip}\!\left(\frac{1-q_{k,p}}{1-\rho_{\mathrm{lo}}},0,1\right).
+\mathrm{clip}\!\left(\frac{1-q_{k,p}}{1-\rho_{\mathrm{lo}}},0,1\right).
 $$
 
 From step 3 onward, adjacent-step feedback is fused with interval-normalized
