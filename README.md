@@ -91,6 +91,13 @@ Please follow the official installation instructions for
 [Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5) and run
 the Cosmos example in its environment.
 
+### Text-to-audio-video backbones
+
+Please follow the official installation instructions for
+[Ovi](https://github.com/character-ai/Ovi) or
+[LTX-2.3](https://github.com/Lightricks/LTX-2), then run the corresponding
+example in that backbone's environment.
+
 ## Usage
 
 Every backbone is implemented as a self-contained script containing the full
@@ -162,6 +169,31 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
   --num-frames 81
 ```
 
+### Text-to-audio-video
+
+#### Ovi 1.1
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/t2av/ovi.py \
+  --gpu 0 \
+  --config-file "/path/to/Ovi/ovi/configs/inference/inference_fusion.yaml" \
+  --model-path "/path/to/Ovi-model" \
+  --wan-path "/path/to/Wan2.2-TI2V-5B" \
+  --prompt "YOUR_PROMPT" \
+  --num-frames 241
+```
+
+#### LTX-2.3
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/t2av/ltx2_3.py \
+  --gpu 0 \
+  --model-root "/path/to/LTX-2.3" \
+  --gemma-root "/path/to/gemma-3-12b" \
+  --prompt "YOUR_PROMPT" \
+  --num-frames 97
+```
+
 Replace `YOUR_PROMPT`, the input image path, model path, and CUDA device as
 needed. Seeds, output paths, and TrajCFG hyperparameters can also be overridden
 through command-line arguments. Outputs are written to `outputs/`; each MP4 is
@@ -181,6 +213,8 @@ One non-VBench qualitative example is provided for each task/backbone. See
 | I2V | Wan2.2-TI2V-5B | 5.0 | 2.0 | 10.0 | 0.95 | 40 |
 | I2V | Wan2.2-I2V-A14B | 2.5 | 1.0 | 7.0 | 0.95 | 40 |
 | I2V | Cosmos-Predict2.5-2B | 5.0 | 4.0 | 9.0 | 0.90 | 35 |
+| T2AV | Ovi 1.1 | 3.5 | 3.5 | 10.0 | 0.95 | 50 |
+| T2AV | LTX-2.3 | 5.0 | 4.0 | 9.0 | 0.90 | 30 |
 
 These defaults match Table 7 of the paper. All examples use adjacent/stride-2
 fusion weights `(0.8, 0.2)`.
@@ -191,7 +225,8 @@ fusion weights `(0.8, 0.2)`.
 TrajCFG/
 ├── examples/
 │   ├── t2v/                 # Self-contained text-to-video examples
-│   └── i2v/                 # Self-contained image-to-video examples
+│   ├── i2v/                 # Self-contained image-to-video examples
+│   └── t2av/                # Self-contained text-to-audio-video examples
 ├── assets/README.md         # Qualitative example inputs and results
 └── README.md
 ```
@@ -221,3 +256,5 @@ This repository builds upon the following open-source projects:
 - [Wan2.1](https://github.com/Wan-Video/Wan2.1) and
   [Wan2.2](https://github.com/Wan-Video/Wan2.2).
 - [Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5).
+- [Ovi](https://github.com/character-ai/Ovi).
+- [LTX-2.3](https://github.com/Lightricks/LTX-2).
