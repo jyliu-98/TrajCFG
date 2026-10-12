@@ -98,6 +98,12 @@ Please follow the official installation instructions for
 [LTX-2.3](https://github.com/Lightricks/LTX-2), then run the corresponding
 example in that backbone's environment.
 
+### Text-to-image backbones
+
+Please follow the official installation instructions for
+[Diffusers](https://github.com/huggingface/diffusers) and obtain the
+corresponding SD3-Medium or Qwen-Image checkpoint before running the examples.
+
 ## Usage
 
 Every backbone is implemented as a self-contained script containing the full
@@ -194,11 +200,31 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ltx2_3.py \
   --num-frames 97
 ```
 
+### Text-to-image
+
+#### Stable Diffusion 3 Medium
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/t2i/sd3_medium.py \
+  --gpu 0 \
+  --model-id "stabilityai/stable-diffusion-3-medium-diffusers" \
+  --prompt "YOUR_PROMPT"
+```
+
+#### Qwen-Image-2512
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/t2i/qwen_image.py \
+  --gpu 0 \
+  --model-id "Qwen/Qwen-Image-2512" \
+  --prompt "YOUR_PROMPT"
+```
+
 Replace `YOUR_PROMPT`, the input image path, model path, and CUDA device as
 needed. Seeds, output paths, and TrajCFG hyperparameters can also be overridden
-through command-line arguments. Outputs are written to `outputs/`; each MP4 is
-accompanied by a JSON file containing the generation settings and per-step
-scale statistics.
+through command-line arguments. Outputs are written to `outputs/`; every
+generated MP4 or PNG is accompanied by a JSON file containing the generation
+settings and per-step scale statistics.
 
 One non-VBench qualitative example is provided for each task/backbone. See
 [assets/README.md](assets/README.md) for the corresponding inputs and results.
@@ -215,6 +241,8 @@ One non-VBench qualitative example is provided for each task/backbone. See
 | I2V | Cosmos-Predict2.5-2B | 5.0 | 4.0 | 9.0 | 0.90 | 35 |
 | T2AV | Ovi 1.1 | 3.5 | 3.5 | 10.0 | 0.95 | 50 |
 | T2AV | LTX-2.3 | 5.0 | 4.0 | 9.0 | 0.90 | 30 |
+| T2I | Qwen-Image | 5.0 | 4.0 | 9.0 | 0.95 | 30 |
+| T2I | SD3-Medium | 7.0 | 6.0 | 9.0 | 0.95 | 28 |
 
 These defaults match Table 7 of the paper. All examples use adjacent/stride-2
 fusion weights `(0.8, 0.2)`.
@@ -226,7 +254,8 @@ TrajCFG/
 ├── examples/
 │   ├── t2v/                 # Self-contained text-to-video examples
 │   ├── i2v/                 # Self-contained image-to-video examples
-│   └── t2av/                # Self-contained text-to-audio-video examples
+│   ├── t2av/                # Self-contained text-to-audio-video examples
+│   └── t2i/                 # Self-contained text-to-image examples
 ├── assets/README.md         # Qualitative example inputs and results
 └── README.md
 ```
@@ -258,3 +287,5 @@ This repository builds upon the following open-source projects:
 - [Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5).
 - [Ovi](https://github.com/character-ai/Ovi).
 - [LTX-2.3](https://github.com/Lightricks/LTX-2).
+- [Stable Diffusion 3](https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers).
+- [Qwen-Image](https://huggingface.co/Qwen/Qwen-Image-2512).

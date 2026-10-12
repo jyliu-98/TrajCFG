@@ -12,5 +12,7 @@ Each example is selected from the paper's non-VBench qualitative results. The me
 | Cosmos-Predict2.5-2B | Honey dripping onto a honeycomb (PAI-Bench-G) | [Image](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/i2v/pai_g_cosmos/input.jpeg) | [Video](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/i2v/pai_g_cosmos/trajcfg.mp4) |
 | Ovi 1.1 | Gamer's controller dies during combat (T2AV-Compass) | Text | [Video + audio](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/t2av/t2av_compass_ovi/trajcfg.mp4) |
 | LTX-2.3 | Three knocks at an apartment door (T2AV-Compass) | Text | [Video + audio](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/t2av/t2av_compass_ltx23/trajcfg.mp4) |
+| Stable Diffusion 3 Medium | A dog right of a teddy bear (GenEval) | Text | [Base / TrajCFG comparison](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/t2i/sd3-medium/comparison.png) |
+| Qwen-Image | Three baseball bats (GenEval) | Text | [Base / TrajCFG comparison](https://jyliu-98.github.io/trajcfg-project-page/assets/gallery/t2i/qwen-image/comparison.png) |
 
 The I2V scripts use the raw GitHub URLs for these conditioning images by default. Pass `--image /path/to/input.jpg` to run entirely from local files.
