@@ -96,25 +96,71 @@ the Cosmos example in its environment.
 Every backbone is implemented as a self-contained script containing the full
 TrajCFG feedback rule, denoising loop, model loading, and output handling.
 
+### Text-to-video
+
+#### Wan2.1-T2V-1.3B
+
 ```bash
-# Text-to-video
-python examples/t2v/wan21_1_3b.py
-python examples/t2v/wan22_5b.py
-python examples/t2v/wan22_14b.py
-
-# Image-to-video
-python examples/i2v/wan22_5b.py
-python examples/i2v/wan22_14b.py
-
-# Image-to-video with Cosmos-Predict2.5
-python examples/i2v/cosmos_predict2_5_2b.py \
-  --checkpoint-path /path/to/Cosmos-Predict2.5-2B
+CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan21_1_3b.py \
+  --gpu 0 \
+  --model-id "Wan-AI/Wan2.1-T2V-1.3B-Diffusers" \
+  --prompt "YOUR_PROMPT"
 ```
 
-Prompts, seeds, model paths, output paths, and TrajCFG hyperparameters can be
-overridden through command-line arguments. Outputs are written to `outputs/`;
-each MP4 is accompanied by a JSON file containing the generation settings and
-per-step scale statistics.
+#### Wan2.2-TI2V-5B
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_5b.py \
+  --gpu 0 \
+  --model-id "Wan-AI/Wan2.2-TI2V-5B-Diffusers" \
+  --prompt "YOUR_PROMPT"
+```
+
+#### Wan2.2-T2V-A14B
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
+  --gpu 0 \
+  --model-id "Wan-AI/Wan2.2-T2V-A14B-Diffusers" \
+  --prompt "YOUR_PROMPT"
+```
+
+### Image-to-video
+
+#### Wan2.2-TI2V-5B
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_5b.py \
+  --gpu 0 \
+  --model-id "Wan-AI/Wan2.2-TI2V-5B-Diffusers" \
+  --image "/path/to/input.jpg" \
+  --prompt "YOUR_PROMPT"
+```
+
+#### Wan2.2-I2V-A14B
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_14b.py \
+  --gpu 0 \
+  --model-id "Wan-AI/Wan2.2-I2V-A14B-Diffusers" \
+  --image "/path/to/input.jpg" \
+  --prompt "YOUR_PROMPT"
+```
+
+#### Cosmos-Predict2.5-2B
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
+  --checkpoint-path "/path/to/Cosmos-Predict2.5-2B" \
+  --image "/path/to/input.jpg" \
+  --prompt "YOUR_PROMPT"
+```
+
+Replace `YOUR_PROMPT`, the input image path, model path, and CUDA device as
+needed. Seeds, output paths, and TrajCFG hyperparameters can also be overridden
+through command-line arguments. Outputs are written to `outputs/`; each MP4 is
+accompanied by a JSON file containing the generation settings and per-step
+scale statistics.
 
 One non-VBench qualitative example is provided for each task/backbone. See
 [assets/README.md](assets/README.md) for the corresponding inputs and results.
