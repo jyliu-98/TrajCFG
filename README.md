@@ -104,7 +104,8 @@ TrajCFG feedback rule, denoising loop, model loading, and output handling.
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan21_1_3b.py \
   --gpu 0 \
   --model-id "Wan-AI/Wan2.1-T2V-1.3B-Diffusers" \
-  --prompt "YOUR_PROMPT"
+  --prompt "YOUR_PROMPT" \
+  --num-frames 81
 ```
 
 #### Wan2.2-TI2V-5B
@@ -113,7 +114,8 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan21_1_3b.py \
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_5b.py \
   --gpu 0 \
   --model-id "Wan-AI/Wan2.2-TI2V-5B-Diffusers" \
-  --prompt "YOUR_PROMPT"
+  --prompt "YOUR_PROMPT" \
+  --num-frames 81
 ```
 
 #### Wan2.2-T2V-A14B
@@ -122,7 +124,8 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_5b.py \
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
   --gpu 0 \
   --model-id "Wan-AI/Wan2.2-T2V-A14B-Diffusers" \
-  --prompt "YOUR_PROMPT"
+  --prompt "YOUR_PROMPT" \
+  --num-frames 81
 ```
 
 ### Image-to-video
@@ -134,7 +137,8 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_5b.py \
   --gpu 0 \
   --model-id "Wan-AI/Wan2.2-TI2V-5B-Diffusers" \
   --image "/path/to/input.jpg" \
-  --prompt "YOUR_PROMPT"
+  --prompt "YOUR_PROMPT" \
+  --num-frames 81
 ```
 
 #### Wan2.2-I2V-A14B
@@ -144,7 +148,8 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_14b.py \
   --gpu 0 \
   --model-id "Wan-AI/Wan2.2-I2V-A14B-Diffusers" \
   --image "/path/to/input.jpg" \
-  --prompt "YOUR_PROMPT"
+  --prompt "YOUR_PROMPT" \
+  --num-frames 81
 ```
 
 #### Cosmos-Predict2.5-2B
@@ -153,7 +158,8 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_14b.py \
 CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
   --checkpoint-path "/path/to/Cosmos-Predict2.5-2B" \
   --image "/path/to/input.jpg" \
-  --prompt "YOUR_PROMPT"
+  --prompt "YOUR_PROMPT" \
+  --num-frames 81
 ```
 
 Replace `YOUR_PROMPT`, the input image path, model path, and CUDA device as
