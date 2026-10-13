@@ -25,7 +25,7 @@ except ImportError:
 
 
 MODEL_ID = "stabilityai/stable-diffusion-3-medium-diffusers"
-PROMPT = "A dog right of a teddy bear."
+PROMPT = "a photo of a dog right of a teddy bear"
 OUTPUT = "outputs/t2i_sd3_medium.png"
 
 HEIGHT = 1024

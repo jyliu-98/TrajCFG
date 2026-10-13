@@ -26,9 +26,7 @@ PROMPT = (
     "game combat—explosions, rapid gunfire, and urgent in-game callouts. As the camera performs a slow, "
     "dramatic dolly-in, the chaotic combat audio cuts out abruptly, replaced by the stark, repetitive "
     "beep of a low-battery game controller. The man's focused expression shatters into wide-eyed panic "
-    "as he shouts in a frantic, high-pitched voice, 'No, no, no! My controller died! REVIVE ME!' "
-    "Audio: Thunderous video game combat with explosions, rapid gunfire, and urgent callouts cuts out "
-    "abruptly. A low-battery controller beeps, followed by the man's frantic shout."
+    "as he shouts in a frantic, high-pitched voice, \"No, no, no! My controller died! REVIVE ME!\""
 )
 OUTPUT = "outputs/t2av_ovi.mp4"
 
