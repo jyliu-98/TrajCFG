@@ -255,8 +255,8 @@ through command-line arguments. Outputs are written to `outputs/`; every
 generated result is accompanied by a JSON file containing the generation
 settings and per-step scale statistics.
 
-One non-VBench qualitative example is provided for each task/backbone. See
-[assets/README.md](assets/README.md) for the corresponding inputs and results.
+See [assets/README.md](assets/README.md) for the input images and 3D mesh used
+by the image-conditioned examples.
 
 ## Reproduced settings
 
@@ -288,7 +288,7 @@ TrajCFG/
 │   ├── t2av/                # Self-contained text-to-audio-video examples
 │   ├── t2i/                 # Self-contained text-to-image examples
 │   └── i2_3d/               # Self-contained image-to-3D examples
-├── assets/README.md         # Qualitative example inputs and results
+├── assets/README.md         # Required input images and 3D mesh
 └── README.md
 ```
 
