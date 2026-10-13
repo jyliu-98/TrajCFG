@@ -38,7 +38,7 @@
   </a>
 </p>
 
-## Overview
+## 💡 Overview
 
 Classifier-free guidance typically applies one shared scale to all latent
 tokens, even though their velocity predictions evolve differently during
@@ -71,51 +71,51 @@ $$
 From step 3 onward, adjacent-step feedback is fused with interval-normalized
 stride-2 feedback using weights `0.8/0.2`.
 
-## Installation
+## 🔧 Installation
 
 ```bash
 git clone https://github.com/jyliu-98/TrajCFG.git
 cd TrajCFG
 ```
 
-### Wan backbones
+### 🎞️ Wan backbones
 
 Please follow the official installation instructions for
 [Diffusers](https://github.com/huggingface/diffusers) and the corresponding
 [Wan2.1](https://github.com/Wan-Video/Wan2.1) or
 [Wan2.2](https://github.com/Wan-Video/Wan2.2) backbone.
 
-### Cosmos-Predict2.5
+### 🌌 Cosmos-Predict2.5
 
 Please follow the official installation instructions for
 [Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5) and run
 the Cosmos example in its environment.
 
-### Text-to-audio-video backbones
+### 🔊 Text-to-audio-video backbones
 
 Please follow the official installation instructions for
 [Ovi](https://github.com/character-ai/Ovi) or
 [LTX-2.3](https://github.com/Lightricks/LTX-2), then run the corresponding
 example in that backbone's environment.
 
-### Text-to-image backbones
+### 🖼️ Text-to-image backbones
 
 Please follow the official installation instructions for
 [Diffusers](https://github.com/huggingface/diffusers) and obtain the
 corresponding SD3-Medium or Qwen-Image checkpoint before running the examples.
 
-### Image-to-3D backbone
+### 🧊 Image-to-3D backbone
 
 Please follow the official installation instructions for
 [Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2), then run the
 shape and texture examples in its environment.
 
-## Usage
+## 🚀 Usage
 
 Every backbone is implemented as a self-contained script containing the full
 TrajCFG feedback rule, denoising loop, model loading, and output handling.
 
-### Text-to-video
+### 🎬 Text-to-video
 
 #### Wan2.1-T2V-1.3B
 
@@ -162,7 +162,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
   --rho-lo 0.90
 ```
 
-### Image-to-video
+### 🎞️ Image-to-video
 
 #### Wan2.2-TI2V-5B
 
@@ -211,7 +211,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
   --rho-lo 0.90
 ```
 
-### Text-to-audio-video
+### 🔊 Text-to-audio-video
 
 #### Ovi 1.1
 
@@ -247,7 +247,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ltx2_3.py \
   --rho-lo 0.90
 ```
 
-### Text-to-image
+### 🖼️ Text-to-image
 
 #### Stable Diffusion 3 Medium
 
@@ -277,7 +277,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2i/qwen_image.py \
   --rho-lo 0.95
 ```
 
-### Image-to-3D
+### 🧊 Image-to-3D
 
 #### Hunyuan3D-2 shape generation
 
@@ -317,7 +317,7 @@ JSON file containing the generation settings and per-step scale statistics.
 See [assets/README.md](assets/README.md) for the input images and 3D mesh used
 by the image-conditioned examples.
 
-## Reproduced settings
+## ⚙️ Reproduced settings
 
 | Task | Backbone | `s_base` | `s_min` | `s_max` | `rho_lo` | Steps |
 |:---:|---|---:|---:|---:|---:|---:|
@@ -337,7 +337,7 @@ by the image-conditioned examples.
 These defaults match Table 7 of the paper. All examples use adjacent/stride-2
 fusion weights `(0.8, 0.2)`.
 
-## Repository structure
+## 📁 Repository structure
 
 ```text
 TrajCFG/
@@ -354,7 +354,7 @@ TrajCFG/
 └── README.md
 ```
 
-## Citation
+## 📎 Citation
 
 If you find this work useful, please consider citing:
 
@@ -370,7 +370,7 @@ If you find this work useful, please consider citing:
 
 The arXiv identifier will be added after the preprint is released.
 
-## Acknowledgements
+## 🤝 Acknowledgements
 
 This repository builds upon the following open-source projects:
 
