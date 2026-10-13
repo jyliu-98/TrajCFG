@@ -42,10 +42,8 @@ from cosmos_predict2.config import (
 
 MODEL = "2B/post-trained"
 CHECKPOINT_PATH = "checkpoints/Cosmos-Predict2.5-2B"
-INPUT_IMAGE = (
-    "https://raw.githubusercontent.com/jyliu-98/trajcfg-project-page/main/"
-    "assets/gallery/i2v/pai_g_cosmos/input.jpeg"
-)
+REPO_ROOT = Path(__file__).resolve().parents[2]
+INPUT_IMAGE = str(REPO_ROOT / "assets/i2v/cosmos_predict2_5.jpeg")
 PROMPT = "A close-up view of a golden, translucent honeycomb-like substance, likely honeycomb or a similar gelatinous material, set against a stark black background. The honeycomb's intricate, honeycomb-like structure is highlighted by the lighting, which emphasizes its glossy, reflective quality. A thin stream of honey is seen dripping from the top left corner, cascading down onto the honeycomb's surface. The honey appears thick and viscous, clinging to itself as it flows, creating small droplets and ripples upon contact with the textured surface below. The honey's movement is slow and deliberate, showcasing the fluidity and translucency of the material as it interacts with the honeycomb. The camera remains steady throughout, focusing on the interaction between the dripping honey and the honeycomb, capturing the mesmerizing beauty and complexity of the scene. As the video progresses, the honey continues to drip and spread across the honeycomb, creating dynamic patterns and textures. The honeycomb's intricate structure and the glossy, reflective quality of the material remain prominently displayed, maintaining the mesmerizing and delicate nature of the interaction until the end of the video."
 OUTPUT = "outputs/i2v_cosmos_predict2_5_2b.mp4"
 

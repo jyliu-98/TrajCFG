@@ -155,7 +155,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
 CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_5b.py \
   --gpu 0 \
   --model-id "Wan-AI/Wan2.2-TI2V-5B-Diffusers" \
-  --image "/path/to/input.jpg" \
+  --image "assets/i2v/wan22_5b.jpeg" \
   --prompt "YOUR_PROMPT" \
   --num-frames 81
 ```
@@ -166,7 +166,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_5b.py \
 CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_14b.py \
   --gpu 0 \
   --model-id "Wan-AI/Wan2.2-I2V-A14B-Diffusers" \
-  --image "/path/to/input.jpg" \
+  --image "assets/i2v/wan22_14b.jpeg" \
   --prompt "YOUR_PROMPT" \
   --num-frames 81
 ```
@@ -176,7 +176,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_14b.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
   --checkpoint-path "/path/to/Cosmos-Predict2.5-2B" \
-  --image "/path/to/input.jpg" \
+  --image "assets/i2v/cosmos_predict2_5.jpeg" \
   --prompt "YOUR_PROMPT" \
   --num-frames 81
 ```
@@ -234,7 +234,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2i/qwen_image.py \
 CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/shape.py \
   --gpu 0 \
   --model-path "tencent/Hunyuan3D-2" \
-  --image "/path/to/input.png" \
+  --image "assets/i2_3d/386.jpeg" \
   --num-inference-steps 50
 ```
 
@@ -244,8 +244,8 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/shape.py \
 CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/texture.py \
   --gpu 0 \
   --model-path "tencent/Hunyuan3D-2" \
-  --image "/path/to/input.png" \
-  --mesh "outputs/i2_3d_shape.glb" \
+  --image "assets/i2_3d/386.jpeg" \
+  --mesh "assets/i2_3d/386.glb" \
   --num-inference-steps 50
 ```
 
@@ -288,7 +288,10 @@ TrajCFG/
 │   ├── t2av/                # Self-contained text-to-audio-video examples
 │   ├── t2i/                 # Self-contained text-to-image examples
 │   └── i2_3d/               # Self-contained image-to-3D examples
-├── assets/README.md         # Required input images and 3D mesh
+├── assets/
+│   ├── i2v/                 # I2V conditioning images
+│   ├── i2_3d/               # I2-3D images and meshes
+│   └── README.md
 └── README.md
 ```
 

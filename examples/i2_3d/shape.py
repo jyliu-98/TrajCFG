@@ -19,10 +19,8 @@ from hy3dgen.shapegen import Hunyuan3DDiTFlowMatchingPipeline
 
 
 MODEL_PATH = "tencent/Hunyuan3D-2"
-INPUT_IMAGE = (
-    "https://raw.githubusercontent.com/jyliu-98/trajcfg-project-page/main/"
-    "assets/gallery/i2-3d/386.jpeg"
-)
+REPO_ROOT = Path(__file__).resolve().parents[2]
+INPUT_IMAGE = str(REPO_ROOT / "assets/i2_3d/386.jpeg")
 OUTPUT = "outputs/i2_3d_shape.glb"
 
 NUM_INFERENCE_STEPS = 50

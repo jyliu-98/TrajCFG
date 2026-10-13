@@ -22,11 +22,9 @@ from hy3dgen.texgen import Hunyuan3DPaintPipeline
 
 MODEL_PATH = "tencent/Hunyuan3D-2"
 PAINT_SUBFOLDER = "hunyuan3d-paint-v2-0"
-INPUT_IMAGE = (
-    "https://raw.githubusercontent.com/jyliu-98/trajcfg-project-page/main/"
-    "assets/gallery/i2-3d/386.jpeg"
-)
-INPUT_MESH = "outputs/i2_3d_shape.glb"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+INPUT_IMAGE = str(REPO_ROOT / "assets/i2_3d/386.jpeg")
+INPUT_MESH = REPO_ROOT / "assets/i2_3d/386.glb"
 OUTPUT = "outputs/i2_3d_texture.glb"
 
 NUM_INFERENCE_STEPS = 50
@@ -46,7 +44,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model-path", default=MODEL_PATH)
     parser.add_argument("--paint-subfolder", default=PAINT_SUBFOLDER)
     parser.add_argument("--image", default=INPUT_IMAGE)
-    parser.add_argument("--mesh", type=Path, default=Path(INPUT_MESH))
+    parser.add_argument("--mesh", type=Path, default=INPUT_MESH)
     parser.add_argument("--output", type=Path, default=Path(OUTPUT))
     parser.add_argument("--num-inference-steps", type=int, default=NUM_INFERENCE_STEPS)
     parser.add_argument("--seed", type=int, default=SEED)

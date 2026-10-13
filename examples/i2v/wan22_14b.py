@@ -13,7 +13,8 @@ from diffusers.utils import export_to_video, load_image
 
 
 MODEL_ID = "Wan-AI/Wan2.2-I2V-A14B-Diffusers"
-INPUT_IMAGE = "https://raw.githubusercontent.com/jyliu-98/trajcfg-project-page/main/assets/gallery/i2v/pai_g_wan22_14b/input.jpeg"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+INPUT_IMAGE = str(REPO_ROOT / "assets/i2v/wan22_14b.jpeg")
 PROMPT = "A white robotic arm with a black mechanical gripper reaches across a compact kitchen workspace and carefully picks up a beige ceramic bowl beside a stainless-steel sink. A bottle of dish soap are arranged along the countertop. The robot’s cables and joints remain clearly visible as it lifts and tilts the bowl with controlled precision. Bright natural indoor lighting, realistic household setting, static high-angle wide shot."
 NEGATIVE_PROMPT = "low quality"
 OUTPUT = "outputs/i2v_wan22_14b.mp4"
@@ -327,4 +328,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
