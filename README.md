@@ -124,7 +124,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan21_1_3b.py \
   --gpu 0 \
   --model-id "/path/to/Wan2.1-T2V-1.3B-Diffusers" \
   --prompt "A car drives through a large puddle, splashing water high onto the sidewalk and drenching a nearby fire hydrant." \
-  --num-frames 81
+  --num-frames 81 \
+  --num-inference-steps 40 \
+  --base-scale 6.0 \
+  --min-scale 5.0 \
+  --max-scale 10.0 \
+  --rho-lo 0.95
 ```
 
 #### Wan2.2-TI2V-5B
@@ -134,7 +139,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_5b.py \
   --gpu 0 \
   --model-id "/path/to/Wan2.2-TI2V-5B-Diffusers" \
   --prompt "A cat paws at a dangling yarn ball, causing it to swing in a pendulum motion while the cat tries to grab it again." \
-  --num-frames 81
+  --num-frames 81 \
+  --num-inference-steps 40 \
+  --base-scale 5.0 \
+  --min-scale 3.0 \
+  --max-scale 10.0 \
+  --rho-lo 0.95
 ```
 
 #### Wan2.2-T2V-A14B
@@ -144,7 +154,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
   --gpu 0 \
   --model-id "/path/to/Wan2.2-T2V-A14B-Diffusers" \
   --prompt "A knife slices through a ripe tomato, separating a slice that falls flat onto the cutting board while juice spreads." \
-  --num-frames 81
+  --num-frames 81 \
+  --num-inference-steps 40 \
+  --base-scale 3.5 \
+  --min-scale 1.0 \
+  --max-scale 10.0 \
+  --rho-lo 0.90
 ```
 
 ### Image-to-video
@@ -157,7 +172,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_5b.py \
   --model-id "/path/to/Wan2.2-TI2V-5B-Diffusers" \
   --image "assets/i2v/wan22_5b.jpeg" \
   --prompt "The video opens with a scene set in a modern, well-lit indoor space, likely a café or exhibition area, characterized by a clean and contemporary design. The background reveals a spacious area with several people seated at tables, engaged in conversation or activities, and potted plants adding a touch of greenery. In the foreground, two robotic arms with white mechanical components and black gloves are positioned at a table. The right robotic hand is holding a red cup with a black lid, which has a festive design featuring snowflakes and other holiday motifs. To the left of the robotic arms, there is a white cup containing what appears to be breadsticks or similar snacks. As the video progresses, the robotic arms begin to move slightly, adjusting the grip on the cup. A woman standing behind the robotic arm then reaches out with her right hand, gently taking the cup from the robotic arm's grasp. The woman holds the cup steadily, examining it closely by rotating it slightly in her hands. The robotic arm remains in place, with its fingers still extended towards the cup but no longer in contact with it. The person continues to hold the cup, while the robotic arm stays stationary, maintaining its initial position at the table. A medium shot captures the interaction between the robotic arm and the woman, highlighting the smooth transition of the cup from the machine to human hands. The setting is bright and inviting, with a mix of modern technology and casual human activity, creating a juxtaposition between automation and human connection." \
-  --num-frames 81
+  --num-frames 81 \
+  --num-inference-steps 40 \
+  --base-scale 5.0 \
+  --min-scale 2.0 \
+  --max-scale 10.0 \
+  --rho-lo 0.95
 ```
 
 #### Wan2.2-I2V-A14B
@@ -168,7 +188,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_14b.py \
   --model-id "/path/to/Wan2.2-I2V-A14B-Diffusers" \
   --image "assets/i2v/wan22_14b.jpeg" \
   --prompt "A white robotic arm with a black mechanical gripper reaches across a compact kitchen workspace and carefully picks up a beige ceramic bowl beside a stainless-steel sink. A bottle of dish soap are arranged along the countertop. The robot’s cables and joints remain clearly visible as it lifts and tilts the bowl with controlled precision. Bright natural indoor lighting, realistic household setting, static high-angle wide shot." \
-  --num-frames 81
+  --num-frames 81 \
+  --num-inference-steps 40 \
+  --base-scale 2.5 \
+  --min-scale 1.0 \
+  --max-scale 7.0 \
+  --rho-lo 0.95
 ```
 
 #### Cosmos-Predict2.5-2B
@@ -178,7 +203,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
   --checkpoint-path "/path/to/Cosmos-Predict2.5-2B" \
   --image "assets/i2v/cosmos_predict2_5.jpeg" \
   --prompt "A close-up view of a golden, translucent honeycomb-like substance, likely honeycomb or a similar gelatinous material, set against a stark black background. The honeycomb's intricate, honeycomb-like structure is highlighted by the lighting, which emphasizes its glossy, reflective quality. A thin stream of honey is seen dripping from the top left corner, cascading down onto the honeycomb's surface. The honey appears thick and viscous, clinging to itself as it flows, creating small droplets and ripples upon contact with the textured surface below. The honey's movement is slow and deliberate, showcasing the fluidity and translucency of the material as it interacts with the honeycomb. The camera remains steady throughout, focusing on the interaction between the dripping honey and the honeycomb, capturing the mesmerizing beauty and complexity of the scene. As the video progresses, the honey continues to drip and spread across the honeycomb, creating dynamic patterns and textures. The honeycomb's intricate structure and the glossy, reflective quality of the material remain prominently displayed, maintaining the mesmerizing and delicate nature of the interaction until the end of the video." \
-  --num-frames 81
+  --num-frames 81 \
+  --num-inference-steps 35 \
+  --base-scale 5.0 \
+  --min-scale 4.0 \
+  --max-scale 9.0 \
+  --rho-lo 0.90
 ```
 
 ### Text-to-audio-video
@@ -193,7 +223,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ovi.py \
   --wan-path "/path/to/Wan2.2-TI2V-5B" \
   --ckpt-dir "/path/to/Ovi/ckpts" \
   --prompt "A dramatic close-up shot focuses on a young man, his face etched with intense concentration, seated in a dimly lit room where his features are illuminated only by the dynamic, flickering glow of a large monitor off-screen. The air is thick with the thunderous sounds of intense video game combat—explosions, rapid gunfire, and urgent in-game callouts. As the camera performs a slow, dramatic dolly-in, the chaotic combat audio cuts out abruptly, replaced by the stark, repetitive beep of a low-battery game controller. The man's focused expression shatters into wide-eyed panic as he shouts in a frantic, high-pitched voice, \"No, no, no! My controller died! REVIVE ME!\"" \
-  --num-frames 241
+  --num-frames 241 \
+  --sample-steps 50 \
+  --base-scale 3.5 \
+  --min-scale 3.5 \
+  --max-scale 10.0 \
+  --rho-lo 0.95
 ```
 
 #### LTX-2.3
@@ -204,7 +239,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ltx2_3.py \
   --model-root "/path/to/LTX-2.3" \
   --gemma-root "/path/to/gemma-3-12b" \
   --prompt "In a medium shot with a somber, cinematic style, a young man in a rain-dampened jacket stands anxiously in a dimly lit apartment hallway. He raises a hesitant hand and knocks three times on a dark wooden door. The sound design features the sharp, echoing sound of the knocks, followed by the click of a lock turning and the slow creak of the door opening. His friend appears in the doorway, a look of concern on his face." \
-  --num-frames 97
+  --num-frames 97 \
+  --num-inference-steps 30 \
+  --base-scale 5.0 \
+  --min-scale 4.0 \
+  --max-scale 9.0 \
+  --rho-lo 0.90
 ```
 
 ### Text-to-image
@@ -215,7 +255,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ltx2_3.py \
 CUDA_VISIBLE_DEVICES=0 python examples/t2i/sd3_medium.py \
   --gpu 0 \
   --model-id "/path/to/stable-diffusion-3-medium-diffusers" \
-  --prompt "a photo of a dog right of a teddy bear"
+  --prompt "a photo of a dog right of a teddy bear" \
+  --num-inference-steps 28 \
+  --base-scale 7.0 \
+  --min-scale 6.0 \
+  --max-scale 9.0 \
+  --rho-lo 0.95
 ```
 
 #### Qwen-Image-2512
@@ -224,7 +269,12 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2i/sd3_medium.py \
 CUDA_VISIBLE_DEVICES=0 python examples/t2i/qwen_image.py \
   --gpu 0 \
   --model-id "/path/to/Qwen-Image-2512" \
-  --prompt "a photo of three baseball bats"
+  --prompt "a photo of three baseball bats" \
+  --num-inference-steps 30 \
+  --base-scale 5.0 \
+  --min-scale 4.0 \
+  --max-scale 9.0 \
+  --rho-lo 0.95
 ```
 
 ### Image-to-3D
@@ -236,7 +286,11 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/shape.py \
   --gpu 0 \
   --model-path "/path/to/Hunyuan3D-2" \
   --image "assets/i2_3d/386.jpeg" \
-  --num-inference-steps 50
+  --num-inference-steps 50 \
+  --base-scale 7.0 \
+  --min-scale 5.0 \
+  --max-scale 9.0 \
+  --rho-lo 0.95
 ```
 
 #### Hunyuan3D-2 texture generation
@@ -247,7 +301,11 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/texture.py \
   --model-path "/path/to/Hunyuan3D-2" \
   --image "assets/i2_3d/386.jpeg" \
   --mesh "assets/i2_3d/386.glb" \
-  --num-inference-steps 50
+  --num-inference-steps 50 \
+  --base-scale 2.0 \
+  --min-scale 2.0 \
+  --max-scale 3.0 \
+  --rho-lo 0.95
 ```
 
 The commands above use the exact prompts of the provided qualitative examples.
