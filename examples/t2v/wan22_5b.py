@@ -12,7 +12,7 @@ from diffusers import AutoencoderKLWan, WanPipeline
 from diffusers.utils import export_to_video
 
 
-MODEL_ID = "Wan-AI/Wan2.2-TI2V-5B-Diffusers"
+MODEL_ID = "/path/to/Wan2.2-TI2V-5B-Diffusers"
 PROMPT = "A cat paws at a dangling yarn ball, causing it to swing in a pendulum motion while the cat tries to grab it again."
 NEGATIVE_PROMPT = "low quality"
 OUTPUT = "outputs/t2v_wan22_5b.mp4"
@@ -289,4 +289,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

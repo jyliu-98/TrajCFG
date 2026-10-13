@@ -24,7 +24,7 @@ except ImportError:
     randn_tensor = None
 
 
-MODEL_ID = "stabilityai/stable-diffusion-3-medium-diffusers"
+MODEL_ID = "/path/to/stable-diffusion-3-medium-diffusers"
 PROMPT = "a photo of a dog right of a teddy bear"
 OUTPUT = "outputs/t2i_sd3_medium.png"
 

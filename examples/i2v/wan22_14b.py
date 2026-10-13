@@ -12,7 +12,7 @@ from diffusers import AutoencoderKLWan, WanImageToVideoPipeline
 from diffusers.utils import export_to_video, load_image
 
 
-MODEL_ID = "Wan-AI/Wan2.2-I2V-A14B-Diffusers"
+MODEL_ID = "/path/to/Wan2.2-I2V-A14B-Diffusers"
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INPUT_IMAGE = str(REPO_ROOT / "assets/i2v/wan22_14b.jpeg")
 PROMPT = "A white robotic arm with a black mechanical gripper reaches across a compact kitchen workspace and carefully picks up a beige ceramic bowl beside a stainless-steel sink. A bottle of dish soap are arranged along the countertop. The robot’s cables and joints remain clearly visible as it lifts and tilts the bowl with controlled precision. Bright natural indoor lighting, realistic household setting, static high-angle wide shot."

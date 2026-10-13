@@ -46,10 +46,29 @@ NORM_FLOOR = 1e-8
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--config-file", type=Path, default=Path("ovi/configs/inference/inference_fusion.yaml"))
-    parser.add_argument("--model-path", type=Path, required=True, help="Ovi checkpoint directory.")
-    parser.add_argument("--wan-path", type=Path, required=True, help="Wan2.2-TI2V-5B directory used by Ovi.")
-    parser.add_argument("--ckpt-dir", type=Path, default=Path("./ckpts"), help="Ovi auxiliary checkpoint root.")
+    parser.add_argument(
+        "--config-file",
+        type=Path,
+        default=Path("/path/to/Ovi/ovi/configs/inference/inference_fusion.yaml"),
+    )
+    parser.add_argument(
+        "--model-path",
+        type=Path,
+        default=Path("/path/to/Ovi-model"),
+        help="Ovi checkpoint directory.",
+    )
+    parser.add_argument(
+        "--wan-path",
+        type=Path,
+        default=Path("/path/to/Wan2.2-TI2V-5B"),
+        help="Wan2.2-TI2V-5B directory used by Ovi.",
+    )
+    parser.add_argument(
+        "--ckpt-dir",
+        type=Path,
+        default=Path("/path/to/Ovi/ckpts"),
+        help="Ovi auxiliary checkpoint root.",
+    )
     parser.add_argument("--prompt", default=PROMPT)
     parser.add_argument("--output", type=Path, default=Path(OUTPUT))
     parser.add_argument("--num-frames", type=int, default=NUM_FRAMES)

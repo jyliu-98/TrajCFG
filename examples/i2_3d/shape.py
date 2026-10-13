@@ -18,7 +18,7 @@ from tqdm import tqdm
 from hy3dgen.shapegen import Hunyuan3DDiTFlowMatchingPipeline
 
 
-MODEL_PATH = "tencent/Hunyuan3D-2"
+MODEL_PATH = "/path/to/Hunyuan3D-2"
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INPUT_IMAGE = str(REPO_ROOT / "assets/i2_3d/386.jpeg")
 OUTPUT = "outputs/i2_3d_shape.glb"

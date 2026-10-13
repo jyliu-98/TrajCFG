@@ -52,11 +52,16 @@ NORM_FLOOR = 1e-8
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model-root", type=Path, required=True, help="Directory containing LTX-2.3 weights.")
+    parser.add_argument(
+        "--model-root",
+        type=Path,
+        default=Path("/path/to/LTX-2.3"),
+        help="Directory containing LTX-2.3 weights.",
+    )
     parser.add_argument("--checkpoint-path", type=Path, default=None)
     parser.add_argument("--spatial-upsampler-path", type=Path, default=None)
     parser.add_argument("--distilled-lora-path", type=Path, default=None)
-    parser.add_argument("--gemma-root", type=Path, default=None)
+    parser.add_argument("--gemma-root", type=Path, default=Path("/path/to/gemma-3-12b"))
     parser.add_argument("--prompt", default=PROMPT)
     parser.add_argument("--negative-prompt", default=DEFAULT_NEGATIVE_PROMPT)
     parser.add_argument("--output", type=Path, default=Path(OUTPUT))

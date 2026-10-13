@@ -20,7 +20,7 @@ from PIL import Image
 from hy3dgen.texgen import Hunyuan3DPaintPipeline
 
 
-MODEL_PATH = "tencent/Hunyuan3D-2"
+MODEL_PATH = "/path/to/Hunyuan3D-2"
 PAINT_SUBFOLDER = "hunyuan3d-paint-v2-0"
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INPUT_IMAGE = str(REPO_ROOT / "assets/i2_3d/386.jpeg")

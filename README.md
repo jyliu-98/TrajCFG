@@ -122,7 +122,7 @@ TrajCFG feedback rule, denoising loop, model loading, and output handling.
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan21_1_3b.py \
   --gpu 0 \
-  --model-id "Wan-AI/Wan2.1-T2V-1.3B-Diffusers" \
+  --model-id "/path/to/Wan2.1-T2V-1.3B-Diffusers" \
   --prompt "A car drives through a large puddle, splashing water high onto the sidewalk and drenching a nearby fire hydrant." \
   --num-frames 81
 ```
@@ -132,7 +132,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan21_1_3b.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_5b.py \
   --gpu 0 \
-  --model-id "Wan-AI/Wan2.2-TI2V-5B-Diffusers" \
+  --model-id "/path/to/Wan2.2-TI2V-5B-Diffusers" \
   --prompt "A cat paws at a dangling yarn ball, causing it to swing in a pendulum motion while the cat tries to grab it again." \
   --num-frames 81
 ```
@@ -142,7 +142,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_5b.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
   --gpu 0 \
-  --model-id "Wan-AI/Wan2.2-T2V-A14B-Diffusers" \
+  --model-id "/path/to/Wan2.2-T2V-A14B-Diffusers" \
   --prompt "A knife slices through a ripe tomato, separating a slice that falls flat onto the cutting board while juice spreads." \
   --num-frames 81
 ```
@@ -154,7 +154,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_5b.py \
   --gpu 0 \
-  --model-id "Wan-AI/Wan2.2-TI2V-5B-Diffusers" \
+  --model-id "/path/to/Wan2.2-TI2V-5B-Diffusers" \
   --image "assets/i2v/wan22_5b.jpeg" \
   --prompt "The video opens with a scene set in a modern, well-lit indoor space, likely a café or exhibition area, characterized by a clean and contemporary design. The background reveals a spacious area with several people seated at tables, engaged in conversation or activities, and potted plants adding a touch of greenery. In the foreground, two robotic arms with white mechanical components and black gloves are positioned at a table. The right robotic hand is holding a red cup with a black lid, which has a festive design featuring snowflakes and other holiday motifs. To the left of the robotic arms, there is a white cup containing what appears to be breadsticks or similar snacks. As the video progresses, the robotic arms begin to move slightly, adjusting the grip on the cup. A woman standing behind the robotic arm then reaches out with her right hand, gently taking the cup from the robotic arm's grasp. The woman holds the cup steadily, examining it closely by rotating it slightly in her hands. The robotic arm remains in place, with its fingers still extended towards the cup but no longer in contact with it. The person continues to hold the cup, while the robotic arm stays stationary, maintaining its initial position at the table. A medium shot captures the interaction between the robotic arm and the woman, highlighting the smooth transition of the cup from the machine to human hands. The setting is bright and inviting, with a mix of modern technology and casual human activity, creating a juxtaposition between automation and human connection." \
   --num-frames 81
@@ -165,7 +165,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_5b.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/i2v/wan22_14b.py \
   --gpu 0 \
-  --model-id "Wan-AI/Wan2.2-I2V-A14B-Diffusers" \
+  --model-id "/path/to/Wan2.2-I2V-A14B-Diffusers" \
   --image "assets/i2v/wan22_14b.jpeg" \
   --prompt "A white robotic arm with a black mechanical gripper reaches across a compact kitchen workspace and carefully picks up a beige ceramic bowl beside a stainless-steel sink. A bottle of dish soap are arranged along the countertop. The robot’s cables and joints remain clearly visible as it lifts and tilts the bowl with controlled precision. Bright natural indoor lighting, realistic household setting, static high-angle wide shot." \
   --num-frames 81
@@ -191,6 +191,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ovi.py \
   --config-file "/path/to/Ovi/ovi/configs/inference/inference_fusion.yaml" \
   --model-path "/path/to/Ovi-model" \
   --wan-path "/path/to/Wan2.2-TI2V-5B" \
+  --ckpt-dir "/path/to/Ovi/ckpts" \
   --prompt "A dramatic close-up shot focuses on a young man, his face etched with intense concentration, seated in a dimly lit room where his features are illuminated only by the dynamic, flickering glow of a large monitor off-screen. The air is thick with the thunderous sounds of intense video game combat—explosions, rapid gunfire, and urgent in-game callouts. As the camera performs a slow, dramatic dolly-in, the chaotic combat audio cuts out abruptly, replaced by the stark, repetitive beep of a low-battery game controller. The man's focused expression shatters into wide-eyed panic as he shouts in a frantic, high-pitched voice, \"No, no, no! My controller died! REVIVE ME!\"" \
   --num-frames 241
 ```
@@ -213,7 +214,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ltx2_3.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/t2i/sd3_medium.py \
   --gpu 0 \
-  --model-id "stabilityai/stable-diffusion-3-medium-diffusers" \
+  --model-id "/path/to/stable-diffusion-3-medium-diffusers" \
   --prompt "a photo of a dog right of a teddy bear"
 ```
 
@@ -222,7 +223,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2i/sd3_medium.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/t2i/qwen_image.py \
   --gpu 0 \
-  --model-id "Qwen/Qwen-Image-2512" \
+  --model-id "/path/to/Qwen-Image-2512" \
   --prompt "a photo of three baseball bats"
 ```
 
@@ -233,7 +234,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2i/qwen_image.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/shape.py \
   --gpu 0 \
-  --model-path "tencent/Hunyuan3D-2" \
+  --model-path "/path/to/Hunyuan3D-2" \
   --image "assets/i2_3d/386.jpeg" \
   --num-inference-steps 50
 ```
@@ -243,7 +244,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/shape.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/i2_3d/texture.py \
   --gpu 0 \
-  --model-path "tencent/Hunyuan3D-2" \
+  --model-path "/path/to/Hunyuan3D-2" \
   --image "assets/i2_3d/386.jpeg" \
   --mesh "assets/i2_3d/386.glb" \
   --num-inference-steps 50

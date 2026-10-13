@@ -24,7 +24,7 @@ except ImportError:
     randn_tensor = None
 
 
-MODEL_ID = "Qwen/Qwen-Image-2512"
+MODEL_ID = "/path/to/Qwen-Image-2512"
 PROMPT = "a photo of three baseball bats"
 NEGATIVE_PROMPT = (
     "低分辨率，低画质，肢体畸形，手指畸形，画面过饱和，蜡像感，人脸无细节，"

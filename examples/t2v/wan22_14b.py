@@ -12,7 +12,7 @@ from diffusers import AutoencoderKLWan, WanPipeline
 from diffusers.utils import export_to_video
 
 
-MODEL_ID = "Wan-AI/Wan2.2-T2V-A14B-Diffusers"
+MODEL_ID = "/path/to/Wan2.2-T2V-A14B-Diffusers"
 PROMPT = "A knife slices through a ripe tomato, separating a slice that falls flat onto the cutting board while juice spreads."
 NEGATIVE_PROMPT = "low quality"
 OUTPUT = "outputs/t2v_wan22_14b.mp4"
@@ -289,4 +289,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

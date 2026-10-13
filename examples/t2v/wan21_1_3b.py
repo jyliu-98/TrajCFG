@@ -12,7 +12,7 @@ from diffusers import AutoencoderKLWan, WanPipeline
 from diffusers.utils import export_to_video
 
 
-MODEL_ID = "Wan-AI/Wan2.1-T2V-1.3B-Diffusers"
+MODEL_ID = "/path/to/Wan2.1-T2V-1.3B-Diffusers"
 PROMPT = "A car drives through a large puddle, splashing water high onto the sidewalk and drenching a nearby fire hydrant."
 NEGATIVE_PROMPT = "low quality"
 OUTPUT = "outputs/t2v_wan21_1_3b.mp4"
@@ -289,4 +289,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
