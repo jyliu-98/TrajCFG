@@ -42,6 +42,16 @@
   </a>
 </p>
 
+<p align="center"><em>Qualitative results generated with TrajCFG</em></p>
+
+| T2V · Wan2.1-T2V-1.3B | T2V · Wan2.2-T2V-A14B |
+|:---:|:---:|
+| ![](assets/showcase_wan21_t2v.gif) | ![](assets/showcase_wan22_t2v.gif) |
+| <sub>Iron Man plays an electric guitar on a futuristic stage.</sub> | <sub>A salsa dancer spins and dips their partner.</sub> |
+| **I2V · Wan2.2-I2V-A14B** | **I2V · Cosmos-Predict2.5-2B** |
+| ![](assets/showcase_wan22_i2v.gif) | ![](assets/showcase_cosmos_i2v.gif) |
+| <sub>A monorail glides through a lush forested landscape.</sub> | <sub>A large wave crashes into a lighthouse.</sub> |
+
 ## 💡 Overview
 
 Classifier-free guidance typically applies one shared scale to all latent
