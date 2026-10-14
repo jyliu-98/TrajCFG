@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://jyliu-98.github.io/trajcfg-project-page/"><img src="https://img.shields.io/badge/Project-Page-69b3a2" alt="Project Page"></a>
-  <img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv coming soon">
+  <a href="https://arxiv.org/abs/2610.14153"><img src="https://img.shields.io/badge/arXiv-2610.14153-b31b1b.svg" alt="arXiv 2610.14153"></a>
   <a href="https://github.com/jyliu-98/TrajCFG"><img src="https://img.shields.io/github/stars/jyliu-98/TrajCFG?style=social" alt="GitHub stars"></a>
 </p>
 
@@ -363,16 +363,17 @@ TrajCFG/
 If you find this work useful, please consider citing:
 
 ```bibtex
-@article{liu2026trajcfg,
-  title   = {TrajCFG: Token-Wise Classifier-Free Guidance via Denoising Trajectory Feedback},
-  author  = {Liu, Jingyu and Jiang, Hao and Ding, Yikang and Shi, Huafeng and
-             Yang, Xu and Liu, Xiaoqiang and Zhang, Guoxin and Wan, Pengfei and Gai, Kun},
-  journal = {arXiv preprint},
-  year    = {2026}
+@misc{liu2026trajcfg,
+  title         = {TrajCFG: Token-Wise Classifier-Free Guidance via Denoising Trajectory Feedback},
+  author        = {Jingyu Liu and Hao Jiang and Yikang Ding and Huafeng Shi and
+                   Xu Yang and Xiaoqiang Liu and Guoxin Zhang and Pengfei Wan and Kun Gai},
+  year          = {2026},
+  eprint        = {2610.14153},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2610.14153}
 }
 ```
-
-The arXiv identifier will be added after the preprint is released.
 
 ## 🤝 Acknowledgements
 
