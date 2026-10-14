@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/trajcfg_icon.svg" width="360" alt="TrajCFG project icon">
+  <img src="assets/trajcfg_icon.svg" width="720" alt="TrajCFG project icon">
 </p>
 
 # TrajCFG: Token-Wise Classifier-Free Guidance via Denoising Trajectory Feedback
