@@ -42,15 +42,17 @@
   </a>
 </p>
 
-<p align="center"><em>Qualitative results generated with TrajCFG</em></p>
+<p align="center"><em>Qualitative comparisons across six task–backbone settings</em></p>
+<p align="center"><sub>Left to right: <strong>Base</strong> · <strong>TrajCFG (Ours)</strong> · <strong>CFG Map</strong></sub></p>
 
-| T2V · Wan2.1-T2V-1.3B | T2V · Wan2.2-T2V-A14B |
-|:---:|:---:|
-| ![](assets/showcase_wan21_t2v.gif) | ![](assets/showcase_wan22_t2v.gif) |
-| <sub>Iron Man plays an electric guitar on a futuristic stage.</sub> | <sub>A salsa dancer spins and dips their partner.</sub> |
-| **I2V · Wan2.2-I2V-A14B** | **I2V · Cosmos-Predict2.5-2B** |
-| ![](assets/showcase_wan22_i2v.gif) | ![](assets/showcase_cosmos_i2v.gif) |
-| <sub>A monorail glides through a lush forested landscape.</sub> | <sub>A large wave crashes into a lighthouse.</sub> |
+| Task / Backbone | Comparison |
+|:---|:---:|
+| **T2V**<br>Wan2.1-T2V-1.3B<br><sub>A man with a suitcase in a vintage black-and-white film.</sub> | <img src="assets/showcase_compare_t2v_wan21_1_3b.gif" width="720" alt="Wan2.1 T2V comparison"> |
+| **T2V**<br>Wan2.2-TI2V-5B<br><sub>A cat paws at a dangling yarn ball.</sub> | <img src="assets/showcase_compare_t2v_wan22_5b.gif" width="720" alt="Wan2.2 5B T2V comparison"> |
+| **T2V**<br>Wan2.2-T2V-A14B<br><sub>A knife slices through a ripe tomato.</sub> | <img src="assets/showcase_compare_t2v_wan22_14b.gif" width="720" alt="Wan2.2 14B T2V comparison"> |
+| **I2V**<br>Wan2.2-TI2V-5B<br><sub>A robotic arm hands a cup to a woman.</sub> | <img src="assets/showcase_compare_i2v_wan22_5b.gif" width="720" alt="Wan2.2 5B I2V comparison"> |
+| **I2V**<br>Wan2.2-I2V-A14B<br><sub>A robotic arm picks up a ceramic bowl.</sub> | <img src="assets/showcase_compare_i2v_wan22_14b.gif" width="720" alt="Wan2.2 14B I2V comparison"> |
+| **I2V**<br>Cosmos-Predict2.5-2B<br><sub>A woman with curly hair drinks a beer.</sub> | <img src="assets/showcase_compare_i2v_cosmos.gif" width="720" alt="Cosmos I2V comparison"> |
 
 ## 💡 Overview
 
