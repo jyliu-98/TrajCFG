@@ -220,7 +220,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
 #### Ovi 1.1
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python examples/t2av/ovi.py \
+CUDA_VISIBLE_DEVICES=0 python -m examples.t2av.ovi \
   --gpu 0 \
   --model-path "/path/to/Ovi-model" \
   --wan-path "/path/to/Wan2.2-TI2V-5B" \
