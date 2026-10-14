@@ -30,7 +30,6 @@ PROMPT = (
 )
 OUTPUT = "outputs/t2av_ovi.mp4"
 
-NUM_FRAMES = 241
 SAMPLE_STEPS = 50
 FPS = 24.0
 SEED = 103
@@ -71,7 +70,6 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--prompt", default=PROMPT)
     parser.add_argument("--output", type=Path, default=Path(OUTPUT))
-    parser.add_argument("--num-frames", type=int, default=NUM_FRAMES)
     parser.add_argument("--sample-steps", type=int, default=SAMPLE_STEPS)
     parser.add_argument("--height", type=int, default=960)
     parser.add_argument("--width", type=int, default=960)
@@ -345,8 +343,6 @@ def build_config(args: argparse.Namespace):
 
 def main() -> None:
     args = parse_args()
-    if args.num_frames != NUM_FRAMES:
-        raise ValueError("Ovi 960x960_10s has a fixed 241-frame output; use --num-frames 241.")
     if not torch.cuda.is_available():
         raise RuntimeError("Ovi inference requires a CUDA device.")
 
@@ -380,7 +376,7 @@ def main() -> None:
         "model_path": str(args.model_path),
         "wan_path": str(args.wan_path),
         "output": str(args.output),
-        "num_frames": args.num_frames,
+        "num_frames": int(video.shape[1]),
         "sample_steps": args.sample_steps,
         "fps": args.fps,
         "seed": args.seed,

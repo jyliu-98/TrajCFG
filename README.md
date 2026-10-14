@@ -227,7 +227,6 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2av/ovi.py \
   --wan-path "/path/to/Wan2.2-TI2V-5B" \
   --ckpt-dir "/path/to/Ovi/ckpts" \
   --prompt "A dramatic close-up shot focuses on a young man, his face etched with intense concentration, seated in a dimly lit room where his features are illuminated only by the dynamic, flickering glow of a large monitor off-screen. The air is thick with the thunderous sounds of intense video game combat—explosions, rapid gunfire, and urgent in-game callouts. As the camera performs a slow, dramatic dolly-in, the chaotic combat audio cuts out abruptly, replaced by the stark, repetitive beep of a low-battery game controller. The man's focused expression shatters into wide-eyed panic as he shouts in a frantic, high-pitched voice, \"No, no, no! My controller died! REVIVE ME!\"" \
-  --num-frames 241 \
   --sample-steps 50 \
   --base-scale 3.5 \
   --min-scale 3.5 \
