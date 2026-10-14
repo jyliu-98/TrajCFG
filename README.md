@@ -316,9 +316,6 @@ TrajCFG hyperparameters can all be overridden through command-line arguments.
 Outputs are written to `outputs/`; every generated result is accompanied by a
 JSON file containing the generation settings and per-step scale statistics.
 
-See [assets/README.md](assets/README.md) for the input images and 3D mesh used
-by the image-conditioned examples.
-
 ## ⚙️ Reproduced settings
 
 | Task | Backbone | `s_base` | `s_min` | `s_max` | `rho_lo` | Steps |
@@ -351,8 +348,7 @@ TrajCFG/
 │   └── i2_3d/               # Self-contained image-to-3D examples
 ├── assets/
 │   ├── i2v/                 # I2V conditioning images
-│   ├── i2_3d/               # I2-3D images and meshes
-│   └── README.md
+│   └── i2_3d/               # I2-3D images and meshes
 └── README.md
 ```
 
