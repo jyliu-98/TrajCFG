@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/trajcfg_icon.svg" width="300" alt="TrajCFG project icon">
+</p>
+
 # TrajCFG: Token-Wise Classifier-Free Guidance via Denoising Trajectory Feedback
 
 <p align="center">
