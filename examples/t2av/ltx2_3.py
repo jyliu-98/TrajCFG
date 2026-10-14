@@ -506,6 +506,7 @@ def build_pipeline(args: argparse.Namespace, paths: dict[str, Path], device: tor
     )
 
 
+@torch.inference_mode()
 def main() -> None:
     args = parse_args()
     if not torch.cuda.is_available():
