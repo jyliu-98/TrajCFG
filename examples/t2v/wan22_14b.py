@@ -13,7 +13,7 @@ from diffusers.utils import export_to_video
 
 
 MODEL_ID = "/path/to/Wan2.2-T2V-A14B-Diffusers"
-PROMPT = "A knife slices through a ripe tomato, separating a slice that falls flat onto the cutting board while juice spreads."
+PROMPT = "A salsa dancer spins their partner rapidly, then dips them low to the ground, pausing for a beat before pulling them back up."
 NEGATIVE_PROMPT = "low quality"
 OUTPUT = "outputs/t2v_wan22_14b.mp4"
 

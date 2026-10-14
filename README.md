@@ -127,7 +127,7 @@ TrajCFG feedback rule, denoising loop, model loading, and output handling.
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan21_1_3b.py \
   --gpu 0 \
   --model-id "/path/to/Wan2.1-T2V-1.3B-Diffusers" \
-  --prompt "A car drives through a large puddle, splashing water high onto the sidewalk and drenching a nearby fire hydrant." \
+  --prompt "Marvel Cinematic Universe style, Iron Man wearing his iconic red, gold, and black armor, playing an electric guitar with intricate designs and patterns. The guitar has a glossy finish and shimmering lights. Tony Stark is positioned mid-air, leaning against a sleek futuristic stage with a backdrop of New York City skyscrapers at night. He is strumming the guitar with precise movements, sparks flying from the strings. The atmosphere is intense and energetic, with colorful neon lights illuminating the room. The camera moves in and out, capturing every detail of Iron Man's agile fingers and the vibrant glow of the guitar. The scene is filled with dynamic lighting changes, emphasizing the high-tech and futuristic elements. High definition, fast-paced action shot, medium shot focusing on Iron Man's face and guitar." \
   --num-frames 81 \
   --num-inference-steps 40 \
   --base-scale 6.0 \
@@ -157,7 +157,7 @@ CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_5b.py \
 CUDA_VISIBLE_DEVICES=0 python examples/t2v/wan22_14b.py \
   --gpu 0 \
   --model-id "/path/to/Wan2.2-T2V-A14B-Diffusers" \
-  --prompt "A knife slices through a ripe tomato, separating a slice that falls flat onto the cutting board while juice spreads." \
+  --prompt "A salsa dancer spins their partner rapidly, then dips them low to the ground, pausing for a beat before pulling them back up." \
   --num-frames 81 \
   --num-inference-steps 40 \
   --base-scale 3.5 \

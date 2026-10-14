@@ -13,7 +13,7 @@ from diffusers.utils import export_to_video
 
 
 MODEL_ID = "/path/to/Wan2.1-T2V-1.3B-Diffusers"
-PROMPT = "A car drives through a large puddle, splashing water high onto the sidewalk and drenching a nearby fire hydrant."
+PROMPT = "Marvel Cinematic Universe style, Iron Man wearing his iconic red, gold, and black armor, playing an electric guitar with intricate designs and patterns. The guitar has a glossy finish and shimmering lights. Tony Stark is positioned mid-air, leaning against a sleek futuristic stage with a backdrop of New York City skyscrapers at night. He is strumming the guitar with precise movements, sparks flying from the strings. The atmosphere is intense and energetic, with colorful neon lights illuminating the room. The camera moves in and out, capturing every detail of Iron Man's agile fingers and the vibrant glow of the guitar. The scene is filled with dynamic lighting changes, emphasizing the high-tech and futuristic elements. High definition, fast-paced action shot, medium shot focusing on Iron Man's face and guitar."
 NEGATIVE_PROMPT = "low quality"
 OUTPUT = "outputs/t2v_wan21_1_3b.mp4"
 
