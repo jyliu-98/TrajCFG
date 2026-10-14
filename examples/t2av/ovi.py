@@ -9,6 +9,7 @@ from collections import deque
 from pathlib import Path
 from typing import Any
 
+import ovi.ovi_fusion_engine as ovi_fusion_engine_module
 import torch
 from omegaconf import OmegaConf
 from tqdm import tqdm
@@ -29,6 +30,10 @@ PROMPT = (
     "as he shouts in a frantic, high-pitched voice, \"No, no, no! My controller died! REVIVE ME!\""
 )
 OUTPUT = "outputs/t2av_ovi.mp4"
+OVI_CONFIG_FILE = (
+    Path(ovi_fusion_engine_module.__file__).resolve().parent
+    / "configs/inference/inference_fusion.yaml"
+)
 
 SAMPLE_STEPS = 50
 FPS = 24.0
@@ -45,11 +50,6 @@ NORM_FLOOR = 1e-8
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--config-file",
-        type=Path,
-        default=Path("/path/to/Ovi/ovi/configs/inference/inference_fusion.yaml"),
-    )
     parser.add_argument(
         "--model-path",
         type=Path,
@@ -315,7 +315,7 @@ class TrajCFGOviFusionEngine(OviFusionEngine):
 
 
 def build_config(args: argparse.Namespace):
-    config = OmegaConf.load(args.config_file)
+    config = OmegaConf.load(OVI_CONFIG_FILE)
     config.ckpt_dir = str(args.ckpt_dir)
     config.model_path = str(args.model_path)
     config.ovi_path = str(args.model_path)

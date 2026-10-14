@@ -222,7 +222,6 @@ CUDA_VISIBLE_DEVICES=0 python examples/i2v/cosmos_predict2_5_2b.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0 python examples/t2av/ovi.py \
   --gpu 0 \
-  --config-file "/path/to/Ovi/ovi/configs/inference/inference_fusion.yaml" \
   --model-path "/path/to/Ovi-model" \
   --wan-path "/path/to/Wan2.2-TI2V-5B" \
   --ckpt-dir "/path/to/Ovi/ckpts" \
