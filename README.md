@@ -42,17 +42,67 @@
   </a>
 </p>
 
-<p align="center"><em>Qualitative comparisons across six task–backbone settings</em></p>
-<p align="center"><sub>Left to right: <strong>Base</strong> · <strong>TrajCFG (Ours)</strong> · <strong>CFG Map</strong></sub></p>
+<p align="center"><em>Qualitative comparisons across four task–backbone settings</em></p>
 
-| Task / Backbone | Comparison |
-|:---|:---:|
-| **T2V**<br>Wan2.1-T2V-1.3B<br><sub>A man with a suitcase in a vintage black-and-white film.</sub> | <img src="assets/showcase_compare_t2v_wan21_1_3b.gif" width="720" alt="Wan2.1 T2V comparison"> |
-| **T2V**<br>Wan2.2-TI2V-5B<br><sub>A cat paws at a dangling yarn ball.</sub> | <img src="assets/showcase_compare_t2v_wan22_5b.gif" width="720" alt="Wan2.2 5B T2V comparison"> |
-| **T2V**<br>Wan2.2-T2V-A14B<br><sub>A knife slices through a ripe tomato.</sub> | <img src="assets/showcase_compare_t2v_wan22_14b.gif" width="720" alt="Wan2.2 14B T2V comparison"> |
-| **I2V**<br>Wan2.2-TI2V-5B<br><sub>A robotic arm hands a cup to a woman.</sub> | <img src="assets/showcase_compare_i2v_wan22_5b.gif" width="720" alt="Wan2.2 5B I2V comparison"> |
-| **I2V**<br>Wan2.2-I2V-A14B<br><sub>A robotic arm picks up a ceramic bowl.</sub> | <img src="assets/showcase_compare_i2v_wan22_14b.gif" width="720" alt="Wan2.2 14B I2V comparison"> |
-| **I2V**<br>Cosmos-Predict2.5-2B<br><sub>A woman with curly hair drinks a beer.</sub> | <img src="assets/showcase_compare_i2v_cosmos.gif" width="720" alt="Cosmos I2V comparison"> |
+<p align="center"><strong>T2V · Wan2.1-T2V-1.3B</strong></p>
+<table>
+  <thead>
+    <tr><th width="33%">Base</th><th width="33%">TrajCFG (Ours)</th><th width="33%">CFG Map</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><img src="assets/showcase_t2v_wan21_1_3b_base.gif" width="320" alt="Wan2.1 T2V base"></td>
+      <td align="center"><img src="assets/showcase_t2v_wan21_1_3b_trajcfg.gif" width="320" alt="Wan2.1 T2V with TrajCFG"></td>
+      <td align="center"><img src="assets/showcase_t2v_wan21_1_3b_cfg_map.gif" width="320" alt="Wan2.1 T2V CFG map"></td>
+    </tr>
+    <tr><td colspan="3"><sub><strong>Text prompt:</strong> Marvel Cinematic Universe style, Iron Man wearing his iconic red, gold, and black armor, playing an electric guitar with intricate designs and patterns. The guitar has a glossy finish and shimmering lights. Tony Stark is positioned mid-air, leaning against a sleek futuristic stage with a backdrop of New York City skyscrapers at night. He is strumming the guitar with precise movements, sparks flying from the strings. The atmosphere is intense and energetic, with colorful neon lights illuminating the room. The camera moves in and out, capturing every detail of Iron Man's agile fingers and the vibrant glow of the guitar. The scene is filled with dynamic lighting changes, emphasizing the high-tech and futuristic elements. High definition, fast-paced action shot, medium shot focusing on Iron Man's face and guitar.</sub></td></tr>
+  </tbody>
+</table>
+
+<p align="center"><strong>T2V · Wan2.2-TI2V-5B</strong></p>
+<table>
+  <thead>
+    <tr><th width="33%">Base</th><th width="33%">TrajCFG (Ours)</th><th width="33%">CFG Map</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><img src="assets/showcase_t2v_wan22_5b_base.gif" width="320" alt="Wan2.2 5B T2V base"></td>
+      <td align="center"><img src="assets/showcase_t2v_wan22_5b_trajcfg.gif" width="320" alt="Wan2.2 5B T2V with TrajCFG"></td>
+      <td align="center"><img src="assets/showcase_t2v_wan22_5b_cfg_map.gif" width="320" alt="Wan2.2 5B T2V CFG map"></td>
+    </tr>
+    <tr><td colspan="3"><sub><strong>Text prompt:</strong> A cat paws at a dangling yarn ball, causing it to swing in a pendulum motion while the cat tries to grab it again.</sub></td></tr>
+  </tbody>
+</table>
+
+<p align="center"><strong>I2V · Wan2.2-I2V-A14B</strong></p>
+<table>
+  <thead>
+    <tr><th width="33%">Base</th><th width="33%">TrajCFG (Ours)</th><th width="33%">CFG Map</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><img src="assets/showcase_i2v_wan22_14b_base.gif" width="320" alt="Wan2.2 14B I2V base"></td>
+      <td align="center"><img src="assets/showcase_i2v_wan22_14b_trajcfg.gif" width="320" alt="Wan2.2 14B I2V with TrajCFG"></td>
+      <td align="center"><img src="assets/showcase_i2v_wan22_14b_cfg_map.gif" width="320" alt="Wan2.2 14B I2V CFG map"></td>
+    </tr>
+    <tr><td colspan="3"><sub><strong>Text prompt:</strong> A white robotic arm with a black mechanical gripper reaches across a compact kitchen workspace and carefully picks up a beige ceramic bowl beside a stainless-steel sink. A bottle of dish soap are arranged along the countertop. The robot’s cables and joints remain clearly visible as it lifts and tilts the bowl with controlled precision. Bright natural indoor lighting, realistic household setting, static high-angle wide shot.</sub></td></tr>
+  </tbody>
+</table>
+
+<p align="center"><strong>I2V · Cosmos-Predict2.5-2B</strong></p>
+<table>
+  <thead>
+    <tr><th width="33%">Base</th><th width="33%">TrajCFG (Ours)</th><th width="33%">CFG Map</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><img src="assets/showcase_i2v_cosmos_base.gif" width="320" alt="Cosmos I2V base"></td>
+      <td align="center"><img src="assets/showcase_i2v_cosmos_trajcfg.gif" width="320" alt="Cosmos I2V with TrajCFG"></td>
+      <td align="center"><img src="assets/showcase_i2v_cosmos_cfg_map.gif" width="320" alt="Cosmos I2V CFG map"></td>
+    </tr>
+    <tr><td colspan="3"><sub><strong>Text prompt:</strong> a woman with curly hair is drinking a beer</sub></td></tr>
+  </tbody>
+</table>
 
 ## 💡 Overview
 
