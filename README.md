@@ -38,7 +38,7 @@
 
 <p align="center">
   <a href="https://jyliu-98.github.io/trajcfg-project-page/">
-    <img src="https://jyliu-98.github.io/trajcfg-project-page/assets/images/method-overview.png" width="88%" alt="TrajCFG method overview">
+    <img src="https://jyliu-98.github.io/trajcfg-project-page/assets/images/method-overview.png" width="44%" alt="TrajCFG method overview">
   </a>
 </p>
 
