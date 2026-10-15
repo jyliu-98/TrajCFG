@@ -42,7 +42,7 @@
   </a>
 </p>
 
-<p align="center"><em>Qualitative comparisons across four task–backbone settings</em></p>
+## 🎞️ Qualitative Results
 
 <p align="center"><strong>T2V · Wan2.1-T2V-1.3B</strong></p>
 <table>
